@@ -7,14 +7,14 @@
     <script type="text/javascript" src="angular-esri-map.js"></script>
     <script type="text/javascript" src="http://js.arcgis.com/3.13compact"></script>
     <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.13/esri/css/esri.css">
-    <title></title>
+    <title>Mapas con Angular</title>
   </head>
   <body ng-app="app">
     <h1>MAPS</h1>
     <div ng-controller="mapController">
       <esri-map id="map" center="map.center" zoom="map.zoom" basemap="{{map.basemap}}">
         <esri-feature-layer url="http://services3.arcgis.com/KBpyuTYurH8v5r9k/arcgis/rest/services/ZonaInteresCordoba1/FeatureServer/0"></esri-feature-layer>
-        <div esri-legend target-id:"legend"></div>
+        <div esri-legend target-id="legend"></div>
       </esri-map>
       <p>
         <strong>Centro:</strong> Latitud: {{map.center.lat | number:3}}, Longitud: {{map.center.lng | number:3}}
