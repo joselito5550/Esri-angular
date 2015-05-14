@@ -1,0 +1,37 @@
+1- Incluimos las librerias de esri dentro del <head> para poder hacer uso de sus mapas, css , ...
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+  <script type="text/javascript" src="angular-esri-map.js"></script>
+  <script type="text/javascript" src="http://js.arcgis.com/3.13compact"></script>
+  <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.13/esri/css/esri.css">
+
+2- En el <body> utilizaremos angular, inciamos una app de angular.
+  <body ng-app="app">
+  </body>
+
+3- Igual que hemos hecho antes, declaramos un <div> con un controlador.
+  <div ng-controller="mapController">
+  </div>
+
+4-Hacemos un <script type="text/javascript"></script> en el que modificaremos el objeto "map"
+  <script type="text/javascript">
+
+  <!-modulo que dependa de esri.map "array de dependencias"-->
+    var app = angular.module('app', ['esri.map']);
+    app.controller('mapController',function($scope){
+      $scope.map = {
+        center  :  {
+          lat: 37.883333,
+          lng:  -4.766667
+        },
+        zoom: 15,
+        basemap:"topo"
+      };
+
+    });
+  </script>
+Con "$scope" pasamos el ambito de las variables donde introducimos un objeto map, que contiene, zoom. basemap, y
+otro objeto llamado center y propiedades lat(latitud) y lng(longitud) Este sera el centro que mostrara el mapa.
+
+5- Dentro del body donde hemos declarado el controlador, creamos una  etiqueta <esri-map> que sera nuestro mapa de esri.
+  <esri-map id="map" center="map.center" zoom="map.zoom" basemap="{{map.basemap}}">
+  Las variables son las que hemos declarado antes en el script.
