@@ -35,3 +35,7 @@ otro objeto llamado center y propiedades lat(latitud) y lng(longitud) Este sera 
 5- Dentro del body donde hemos declarado el controlador, creamos una  etiqueta <esri-map> que sera nuestro mapa de esri.
   <esri-map id="map" center="map.center" zoom="map.zoom" basemap="{{map.basemap}}">
   Las variables son las que hemos declarado antes en el script.
+
+
+Algunos ejemplos de uso: 
+http://esri.github.io/angular-esri-map/#/examples
