@@ -38,4 +38,6 @@ otro objeto llamado center y propiedades lat(latitud) y lng(longitud) Este sera 
 
 
 Algunos ejemplos de uso: 
-http://esri.github.io/angular-esri-map/#/examples
+http://esri.github.io/angular-esri-map/#/e
+
+http://services3.arcgis.com/KBpyuTYurH8v5r9k/arcgis/rest/services/ZonaInteresCordoba1/FeatureServer/0
